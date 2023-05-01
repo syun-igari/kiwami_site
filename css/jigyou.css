@@ -1,0 +1,715 @@
+body{
+  /* 全体の余白を０にするため */
+  margin: 0%; 
+  padding: 0%; 
+  font-family: 'Noto Serif JP', serif;
+
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+.br_main::before{
+  /*brタグを使わずに擬似要素で改行する方法 /Aは改行って意味らしい beforeならクラス名の直前 afterなら直後*/
+  content: "\A" ;
+	white-space: pre ; /*行の自動折り返し 改行を反映させるため*/
+}
+
+.title{
+  background-image: url(../img/wallspace.webp);
+  background-size: cover; /*サイズの縦横比を維持したまま表示*/
+  height: 320px;
+  /*フレックスで上下左右中央に配置する記述 ・alignで上下 ・justifyで左右とりあえず*/
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  /*フレックスで指定する前にやった別の方法 
+  width: 100%; displayをtableしたら、画像が小さくなったから使って
+  display: table; 文字を上下中央にするための記述 親要素に指定*/
+}
+
+/*背景色を画像に重ねる方法を記載*/
+.title::after{
+  content: '';
+  background-color: black;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.6;
+  
+}
+
+.title h1{
+  z-index: 1;
+  letter-spacing: 0.1em;
+  font-family: serif;
+  font-size: 40px;
+  color: #F4F5F7;
+  text-align: center;
+  line-height: 30px; /*h1とspanの行間を縮めるために記載 行間のデフォルトはフォントサイズの倍くらい？*/
+
+  /* display: table-cell; 文字を上下中央にするための記述 子要素に指定 */
+  /* vertical-align:middle; 文字を上下中央にするための記述 子要素に指定 */
+}
+
+.br_main {
+  font-size: 20px;
+}
+
+.jigyou_annai h1 {
+  margin: 0;
+  padding-top: 20px;
+  font-family: serif;
+  color: #000080;
+  letter-spacing: 0.1em;
+  line-height: 30px;
+  text-align: center;
+  font-size: 40px;
+  
+}
+
+.br_annai {
+  color: black;
+  
+}
+
+.jigyou_body{
+  background-color:#F7F7F7;
+}
+
+.jigyou_content{
+  animation-name: jigyouAnime;
+  animation-duration:3s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; 
+  position: relative;
+  margin:50px 200px;
+  padding-top: 50px;
+  row-gap:20px; /*フレックスの要素の行間を指定*/
+  column-gap:20px; /*フレックスの要素の幅間を指定*/
+
+}
+
+.jigyou_content h1 {
+  color: white;
+  padding: 50px;
+  position: relative;
+  z-index: 999;
+  font-size: 30px;
+
+}
+
+.job_con {
+  width:30%;
+}
+
+
+
+.job_con h1 {
+  text-align: center;
+}
+
+.job_content1{
+  background-color: #000080;
+  position: relative;
+}
+
+.job_content2{
+  background-color: #000080;
+  position: relative;
+}
+
+.job_content3{
+  background-color: #000080;
+  position: relative;
+}
+
+.job_content4{
+  background-color: #000080;
+  position: relative;
+}
+
+.job_content5{
+  background-color: #000080;
+  position: relative;
+}
+
+.job_con:hover{
+  transform: scale(1.1);
+  transition: transform 1s;
+  opacity: 0.4;
+}
+
+@keyframes jigyouAnime{
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.jigyou_syousai {
+  background-color: #FFF;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.job_syousaiAnime{
+    animation-name:jigyousyousai;
+    animation-duration:1.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+    @keyframes jigyousyousai{
+      from {
+        opacity: 0;
+      transform: translateY(100px);
+      }
+    
+      to {
+        opacity: 1;
+      transform: translateY(0);
+      }
+    }
+
+.job_syo {
+  display: flex;
+  margin: 100px 100px 0px 100px; 
+  align-items: flex-start;
+  padding-bottom: 70px;
+  border-bottom: 1px solid;
+  opacity: 0;
+
+}
+
+.job_syo:last-child{
+  border-bottom: none;
+}
+
+
+.job_syo img {
+  width: 30%;
+  margin-right: 40px;
+
+}
+
+.job_syo h1{
+  color: #000080;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+
+/*ここから使ってないコード*/
+
+.title_v2{
+  background-image: url(../img/home5.webp);
+  background-size: cover; /*サイズの縦横比を維持したまま表示*/
+  height: 320px;
+  /*フレックスで上下左右中央に配置する記述 ・alignで上下 ・justifyで左右*/
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+
+  /*フレックスで指定する前にやった別の方法 
+  width: 100%; displayをtableしたら、画像が小さくなったから使って
+  display: table; 文字を上下中央にするための記述 親要素に指定*/
+}
+
+/*背景色を画像に重ねる方法を記載*/
+.title_v2::after{
+  content: '';
+  background-color: black;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.6;
+  
+}
+
+.title_v2 h1{
+  z-index: 1;
+  letter-spacing: 0.1em;
+  font-family: serif;
+  font-size: 40px;
+  color: #F4F5F7;
+  text-align: center;
+  line-height: 30px; /*h1とspanの行間を縮めるために記載 行間のデフォルトはフォントサイズの倍くらい？*/
+
+  /* display: table-cell; 文字を上下中央にするための記述 子要素に指定 */
+  /* vertical-align:middle; 文字を上下中央にするための記述 子要素に指定 */
+}
+
+.activity_1 {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
+  background-color: #000080;
+
+}
+
+/*リストタグの中の写真とテキストを左右交互に配置する方法 evenは偶数 oddは奇数*/
+.activity_1:nth-child(even){
+  flex-direction: row-reverse;
+  background-color:#FFF;
+}
+
+.activity_1:nth-child(odd) .phrase{
+  background-color: #fff;
+  color: #292b2c;
+  /*文字の背景を縦横調整のため paddingは余白*/
+  width: 30vw;
+  height: 20vw;
+  padding: 20px;
+
+  /*文字の位置調整*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: -180px;
+  position: relative; /*画像と写真を重ねるために記載*/
+  z-index: 20; /*優先度を上にするため*/
+
+}
+
+.activity_1:nth-child(even) .phrase{
+  background-color: #fff;
+  color: #292b2c;
+  /*文字の背景を縦横調整のため paddingは余白*/
+  width: 30vw;
+  height: 20vw;
+  padding: 20px;
+
+  /*文字の位置調整*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: -180px;
+  position: relative; /*画像と写真を重ねるために記載*/
+  z-index: 20; /*優先度を上にするため*/
+}
+
+.phrase h2{
+  font-size: 18px;
+}
+
+/*画像の写真の位置を指定するために*/
+.bg_main_1{
+  position: relative;
+}
+
+/*アブソリュートだけ指定すると要素が重なるためleftやらを指定している。*/
+.bg_main_1::before {
+  content: '';
+  background-image: url(../img/painting.webp);
+  width: 40px;
+  height: 50px;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: -50px;
+  z-index: 30;
+
+}
+
+/*画像の写真の位置を指定するために*/
+.bg_main_2{
+  position: relative;
+}
+
+/*アブソリュートだけ指定すると要素が重なるためleftやらを指定している。*/
+.bg_main_2::before {
+  content: '';
+  background-image: url(../img/paint.webp);
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: -60px;
+  z-index: 30;
+
+}
+
+/*画像の写真の位置を指定するために*/
+.bg_main_3{
+  position: relative;
+}
+
+/*アブソリュートだけ指定すると要素が重なるためleftやらを指定している。*/
+.bg_main_3::before {
+  content: '';
+  background-image: url(../img/pallet.webp);
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: -60px;
+  z-index: 30;
+
+}
+
+/*画像の写真の位置を指定するために*/
+.bg_main_4{
+  position: relative;
+}
+
+/*アブソリュートだけ指定すると要素が重なるためleftやらを指定している。*/
+.bg_main_4::before {
+  content: '';
+  background-image: url(../img/painting.webp);
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: -60px;
+  z-index: 30;
+
+}
+
+
+.photo{
+  width: 60%;
+}
+.photo img {
+  width:100%;
+
+}
+
+/*ここまで*/
+
+
+.job_sec_flow h1 {
+  font-size: 40px;
+  color: #000080;
+  letter-spacing: 0.1em;
+  line-height: 30px;
+  text-align: center;
+  
+}
+
+.job_flow{
+  height: 200px;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+
+  /*フレックスで指定する前にやった別の方法 
+  width: 100%; displayをtableしたら、画像が小さくなったから使って
+  display: table; 文字を上下中央にするための記述 親要素に指定*/
+}
+
+
+.job_sec_flow{
+   background-color: #F7F7F7; 
+   padding-bottom: 50px;
+
+}
+
+.flow_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+
+ 
+}
+
+.flow_img{
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.flow_img .pc_img {
+  width: 80%;
+}
+
+
+a{
+  color:inherit;
+  text-decoration: none;
+}
+
+.mob_img {
+  display: none;
+}
+
+@media screen and (max-width: 1424px){ 
+
+  .jigyou_content h1 {
+    color: white;
+    padding: 30px;
+    position: relative;
+    z-index: 999;
+    font-size: 15px;
+  
+  }
+   .job_syo {
+    flex-wrap: wrap;
+    margin:50px 50px 0 50px; 
+    padding-bottom: 40px;
+  }
+  
+  
+  .job_syo img {
+    width: 90%;
+    margin: 0 auto;
+  
+  }
+
+  .job_syo h1{
+    color: #000080;
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+  }
+
+  .mob_img {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 1024px){ 
+
+
+   .job_syo {
+    flex-wrap: wrap;
+    margin:50px 50px 0 50px; 
+    padding-bottom: 40px;
+    border-bottom: 1px solid;
+  }
+  
+  
+  .job_syo img {
+    width: 100%;
+  
+  }
+
+  .job_syo h1{
+    color: #000080;
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+  }
+
+  .mob_img {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width:960px) { 
+
+  .jigyou_content{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    position: relative;
+    margin:30px 0;
+    row-gap:10px; /*フレックスの要素の行間を指定*/
+    column-gap:10px; /*フレックスの要素の幅間を指定*/
+  
+  }
+
+  .job_con{
+    width: 30%;
+  }
+
+  .jigyou_content h1 {
+    color: white;
+    position: relative;
+    z-index: 999;
+    font-size: 10px;
+    padding: 20px;
+  
+  }
+
+
+  .pc_img {
+    display: none;
+  }
+
+  .mob_img {
+    display: block;
+    width: 60%;
+  
+  }
+
+}
+
+
+/*-------------------------
+  トップデザイン
+-------------------------*/
+.top-section__wrapper{
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.phrase{
+  width: 45%;
+  position:relative;
+  text-align: center;
+}
+
+.phrase__first{
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.phrase__second{
+  font-size: 5rem;
+  font-weight: 800;
+}
+
+
+.img_wrap{
+  width: 55%;
+  height: 100%;
+}
+
+.background-area{
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/home1.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .top-section__wrapper{
+    height: 60vh;
+  }
+  .phrase__second{
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .top-section__wrapper{
+    height: 35vh;
+  }
+  
+  .phrase__first{
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+  .phrase__second{
+    font-size: 2.5rem;
+  }
+}
+
+/*-------------------------
+  横から白い背景が伸びるアニメーション
+-------------------------*/
+.bgextend {
+  animation-name: bgextendAnimeBase;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  color: #000080;
+  
+
+}
+
+@keyframes bgextendAnimeBase {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/*中の要素*/
+.bgappear {
+  animation-name: bgextendAnimeSecond;
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes bgextendAnimeSecond {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*左から右*/
+.bgLRextend::before {
+  animation-name: bgLRextendAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000080;
+}
+
+@keyframes bgLRextendAnime {
+  0% {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+
+  50% {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  50.001% {
+    transform-origin: right;
+  }
+
+  100% {
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+}
+
+.bgappearTrigger,
+.bgLRextendTrigger {
+  opacity: 0;
+}

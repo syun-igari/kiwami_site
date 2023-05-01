@@ -1,0 +1,121 @@
+@charset "UTF-8";
+/*-------------------------
+  reset css
+-------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500&family=Roboto+Condensed:wght@300;400;700&display=swap');
+html {
+  overflow-y: scroll;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+  margin: 0;
+  padding: 0;
+  font-family:'Roboto Condensed', sans-serif;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+  font-style: normal;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption,th {
+  text-align: left;
+  font-weight: normal;
+}
+q:before,q:after {
+  content: '';
+}
+object,embed {
+  vertical-align: top;
+}
+hr,legend {
+  display: none;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-size: 100%;
+}
+img,abbr,acronym,fieldset {
+  border: 0;
+}
+li {
+  list-style-type: none;
+}
+sup {
+  vertical-align: super;
+  font-size: 0.5em;
+}
+img {
+  vertical-align: top;
+}
+i {
+  font-style: normal;
+}
+
+.main-title h3{
+  text-align: center;
+  font-size: 2rem;
+  padding: 20px;
+}
+.confirm_table{
+  max-width: 900px;
+  margin:0 auto;
+  
+}
+
+.confirm_table table{
+  width:100%;
+  margin-bottom:15px;
+}
+
+.confirm_table th{
+  text-align:left;
+  width:30%;
+  padding: 20px;
+  background-color: #000080;
+  color:#FFF;
+  border-top: solid 1px #FFF;
+  border-bottom: solid 1px #FFF;
+  
+}
+.confirm_table td{
+  width:70%;
+  padding: 10px;
+  border-top:solid 1px #000080;
+  border-bottom:solid 1px #000080;
+  max-width: 1200px;
+}
+
+
+.btn {
+  margin-top:20px;
+  text-align: center;
+}
+.btn span{
+  padding: 20px;
+}
+.btn input {
+  display: inline-block;
+  background: #eee;
+  padding: .5em 4em;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.btn input:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 560px) {
+  .confirm_table th{
+    text-align:left;
+    width:40%;
+    padding: 10px;
+    font-size: 1rem;
+  }
+}

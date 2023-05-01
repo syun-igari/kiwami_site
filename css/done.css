@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+.mailsend {
+  width: 800px;
+  margin: 100px auto;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.mailsend_title {
+  text-align: center;
+}
+
+.message_head {
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 30px;
+}
+
+.message_body {
+  background-color: #f5f5f5;
+  line-height: 2;
+  text-align: center;
+  border-radius: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.mailsend_back {
+  text-align: right;
+}
+
+.mailsend_message {
+  margin-bottom: 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .mailsend {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 5px;
+  }
+  
+  .mailsend_title {
+    font-size: 1.1rem;
+  }
+  
+  .message_head {
+   font-size: 0.95rem;
+  }
+  .space {
+    letter-spacing: 10px;
+  }
+  .small_message {
+    font-size: 0.8rem;
+  }
+  .message_body {
+   font-size: 0.8rem;
+    text-align: justify;
+    padding: 20px;
+  }
+  }
