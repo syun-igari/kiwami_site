@@ -23,7 +23,7 @@ $message = '※このメールはシステムからの自動返信です※' . "
     'Mail:' . h($_POST['Email']) . "\r\n" . "\r\n" .
     'お問い合わせ内容:' . h($_POST['inquiry']) . "\r\n" . "\r\n" .
     '━━━━━━━━━━━━━━━━━━━━━━━━━━━━' . "\r\n";
-$headers = "From:info@infomation.com";
+$headers = "From:r486282@gmail.com";
 ?>
 <!DOCTYPE html>
 <html lang="ja">
