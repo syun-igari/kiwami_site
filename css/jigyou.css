@@ -144,6 +144,11 @@ ul{
   position: relative;
 }
 
+.job_content6{
+  background-color: #000080;
+  position: relative;
+}
+
 .job_con:hover{
   transform: scale(1.1);
   transition: transform 1s;
@@ -427,9 +432,8 @@ ul{
 
 
 .job_sec_flow{
-   background-color: #F7F7F7; 
-   padding-bottom: 50px;
-
+  background-color: #F7F7F7; 
+  padding-bottom: 50px;
 }
 
 .flow_img {
@@ -437,9 +441,6 @@ ul{
   justify-content: center;
   align-items: center;
 
-
-
- 
 }
 
 .flow_img{
