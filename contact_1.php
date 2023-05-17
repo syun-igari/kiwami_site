@@ -69,7 +69,6 @@ $_SESSION['token'] = hash('sha256', md5(uniqid(mt_rand(), true)));
                     <th>ご用件</th>
                     <td><select name="requirements">
                             <option value="ご質問・お問い合わせ">ご質問・お問い合わせ</option>
-                            <option value="リンクについて">株式会社極にについて</option>
                         </select></td>
                 </tr>
                 <tr>
