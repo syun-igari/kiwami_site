@@ -67,15 +67,8 @@ i {
   text-align: center;
 }
 
-.phrase__first{
-  margin-bottom: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-}
-.phrase__second{
-  font-size: 5rem;
-  font-weight: 800;
-}
+.phrase__first{margin-bottom: 10px;font-size: 1rem;font-weight: 600;}
+.phrase__second{font-size: 5rem;font-weight: 800;}
 
 
 .img_wrap{
