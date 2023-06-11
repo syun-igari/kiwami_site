@@ -23,10 +23,27 @@ $message = '※このメールはシステムからの自動返信です※' . "
     'Mail:' . h($_POST['Email']) . "\r\n" . "\r\n" .
     'お問い合わせ内容:' . h($_POST['inquiry']) . "\r\n" . "\r\n" .
     '━━━━━━━━━━━━━━━━━━━━━━━━━━━━' . "\r\n";
-$headers = "From:r486282@gmail.com";
+$headers = "From:r48628@gmail.com";
+
+mb_language("Japanese");
+mb_internal_encoding("UTF-8");
+$to2 = "r48628@gmail.com";
+$subject2 = 'お問い合わせが届きました。';
+$message2 = '※下記お問い合わせ内容詳細です※' . "\r\n" . "\r\n" .
+    '5営業日以内にご回答の返信をお願いいたします。' . "\r\n" .
+    '━━━━━━□■□　お問い合わせ内容　□■□━━━━━━' . "\r\n" .
+    'ご用件：' . h($_POST['requirements']) . "\r\n" . "\r\n" .
+    'お名前:' . h($_POST['name']) . "\r\n" . "\r\n" .
+    '電話番号:' . h($_POST['phoneNumber']) . "\r\n" . "\r\n" .
+    'Mail:' . h($_POST['Email']) . "\r\n" . "\r\n" .
+    'お問い合わせ内容:' . h($_POST['inquiry']) . "\r\n" . "\r\n" .
+    '━━━━━━━━━━━━━━━━━━━━━━━━━━━━' . "\r\n";
+$headers2 = "From:" . h($_POST['Email']);
+mb_send_mail($to2, $subject2, $message2, $headers2);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,25 +51,27 @@ $headers = "From:r486282@gmail.com";
     <link rel="stylesheet" href="./css/done.css">
     <title>送信完了</title>
 </head>
+
 <body>
-<?php if (mb_send_mail($to, $subject, $message, $headers)):?>
-    <div class="wrap">
-        <div class="mailsend">
-            <h1 class="mailsend_title">お問い合わせを受け付けました。</h1>
-            <div class="mailsend_message">
-                <p class="message_head">━━━━━━□■□お問い合わせいただき<span class="space">ありがとうございました</span>□■□━━━━━━<br><span class="small_message">お問い合わせを受け付けました。<br>折り返し、担当者よりご連絡いたしますので、<br>
-                    恐れ入りますが、しばらくお待ちください。</span><br></p>
-                <p class="message_body">
-                    お問い合わせ受付完了メールを配信しております。<br>
-                    完了メールが届かない場合、処理が正常に行われていない可能性があります。<br>
-                    大変お手数ですが、再度お問い合わせの手続きをお願い致します。
-                </p>
+    <?php if (mb_send_mail($to, $subject, $message, $headers)) : ?>
+        <div class="wrap">
+            <div class="mailsend">
+                <h1 class="mailsend_title">お問い合わせを受け付けました。</h1>
+                <div class="mailsend_message">
+                    <p class="message_head">━━━━━━□■□お問い合わせいただき<span class="space">ありがとうございました</span>□■□━━━━━━<br><span class="small_message">お問い合わせを受け付けました。<br>折り返し、担当者よりご連絡いたしますので、<br>
+                            恐れ入りますが、しばらくお待ちください。</span><br></p>
+                    <p class="message_body">
+                        お問い合わせ受付完了メールを配信しております。<br>
+                        完了メールが届かない場合、処理が正常に行われていない可能性があります。<br>
+                        大変お手数ですが、再度お問い合わせの手続きをお願い致します。
+                    </p>
+                </div>
+                <p class="mailsend_back"><a href="contact_1.php">お問い合わせフォームに戻る</a></p>
             </div>
-            <p class="mailsend_back"><a href="contact_1.php">お問い合わせフォームに戻る</a></p>
         </div>
-    </div>
-<?php else : ?>
-    <p>メールが正しく送信されませんでした。<br>お手数ですがs_igari@ebacorp.jpまでご連絡ください。</p>
-<?php endif; ?>
+    <?php else : ?>
+        <p>メールが正しく送信されませんでした。<br>お手数ですがs_igari@ebacorp.jpまでご連絡ください。</p>
+    <?php endif; ?>
 </body>
+
 </html>
