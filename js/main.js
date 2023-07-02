@@ -2,14 +2,14 @@
 let windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
 		if (windowwidth > 768){
 			var responsiveImage = [//PC用
-				{ src: 'img/main.jpg'},
-				{ src: 'img/wallspace.jpg'},
+				{ src: 'img/top/top4.jpg'},
+				{ src: 'img/top/top1.jpg'},
 				{ src: 'img/bgc.webp'}
 			];
 		} else {
 			var responsiveImage = [//タブレット（768px）以下用の画像
-				{ src: 'img/main-sp4.jpg'},
-				{ src: 'img/main-sp5.jpg'},
+				{ src: 'img/top/top2.jpg'},
+				{ src: 'img/top/top3.jpg'},
 				{ src: 'img/main-sp6.jpg'}
 			];
 		}
