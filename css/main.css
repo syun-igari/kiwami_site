@@ -790,7 +790,7 @@ main{
 }
 @media screen and (max-width: 576px) {
   .service{
-    height: 80vh;
+    height: auto;
   }
   .service__phrase{
     display: block;
@@ -829,7 +829,7 @@ main{
 }
 .slider img {
    width:100%;
-   height:auto;
+   height:15em;
    border-radius: 10px;
 }
 
@@ -885,6 +885,12 @@ main{
 
 .slick-dots .slick-active button{
    background:yellow;
+}
+
+@media screen and (max-width: 768px) {
+  .slider img{
+    height: auto;
+  }
 }
 
 /*-------------------------
