@@ -163,7 +163,7 @@ ul{
 }
 
 .about_pre_v2{
-  width:45%;
+  width:50%;
   text-align: justify;
   margin-right: 20px;
 }
@@ -399,6 +399,7 @@ ul{
 }
 .photo img {
   width:100%;
+  vertical-align: bottom;
 
 }
 
@@ -677,6 +678,7 @@ ul{
 
   .photo{
     width: 80%;
+  
   }
   
   .activity_1:nth-child(even) .phrase{
