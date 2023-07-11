@@ -859,7 +859,7 @@ ul{
 .background-area{
   width: 100%;
   height: 100%;
-  background-image: url('../img/home2.webp');
+  background-image: url('../img/home6.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -969,5 +969,3 @@ ul{
 .bgLRextendTrigger {
   opacity: 0;
 }
-
-

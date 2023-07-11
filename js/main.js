@@ -4,7 +4,8 @@ let windowwidth = window.innerWidth || document.documentElement.clientWidth || 0
 			var responsiveImage = [//PC用
 				{ src: 'img/top/top4.jpg'},
 				{ src: 'img/top/top1.jpg'},
-				{ src: 'img/bgc.webp'}
+				{ src: 'img/top/top1.jpg'}
+				
 			];
 		} else {
 			var responsiveImage = [//タブレット（768px）以下用の画像
@@ -107,8 +108,8 @@ let fadeUp = (entries) => {
 let serviceFade = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      fadeUpTarget[2].classList.add('fadeUp');
-      fadeUpTarget[3].classList.add('fadeUp');
+      // fadeUpTarget[2].classList.add('fadeUp');
+      // fadeUpTarget[3].classList.add('fadeUp');
       sectionService.style.background = '#000060';
       sectionService.style.transition = '0.5s';
     }
